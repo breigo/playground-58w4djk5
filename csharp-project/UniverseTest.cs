@@ -1,4 +1,4 @@
-﻿﻿using Answer;
+﻿using Answer;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Linq;
@@ -21,8 +21,8 @@ namespace TechIo
 	}
 
 	[TestCleanup()]
-      	public void Cleanup()
-      	{		
+    public void Cleanup()
+    {
 		if(shouldShowHint)
 		{	
 			// On Failure
@@ -47,7 +47,7 @@ namespace TechIo
 				PrintMessage("Kudos 🌟", "int totalStars = galaxies.Sum(); // 42");
 			}	
 		}
-      	}
+    }
 
 
 	/****

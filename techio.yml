@@ -1,7 +1,17 @@
-title: .NET Core C# Project
+title: C# LINQ Introduction
 plan:
 - title: Welcome
   statement: markdowns/welcome.md
+- title: "What is LINQ?"
+  statement: markdowns/what-is-linq.md
+- title: "Enumerables in .Net"
+  statement: markdowns/enumerables.md
+- title: "Filtering data without LINQ"
+  statement: markdowns/filter-without-linq.md
+- title: "Lambda expressions"
+  statement: markdowns/filter-with-lambda-expressions.md
+- title: "Filtering with LINQ and lambda expressions"
+  statement: markdowns/filter-with-linq.md
 projects:
   csharp:
     root: /csharp-project
