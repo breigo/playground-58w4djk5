@@ -5,7 +5,7 @@ using System.Linq;
 namespace TechIo
 {
     [TestClass]
-    public class FilterWithoutLinqTests
+    public class FilterWithFuncTest
     {
 		private bool shouldShowHint = false;
 
@@ -13,8 +13,9 @@ namespace TechIo
 		public void Verify() 
 		{
 			shouldShowHint = true;
-			var result = FilterWithoutLinq.KeepPositiveNumbers(new[] { -5, 4, 10, 0, -9 }).ToList();
-			CollectionAssert.AreEqual(new []{ 4, 10 }, result);
+			CollectionAssert.AreEqual(new []{ 4, 10 }, FilterWithFunc.KeepPositiveNumbers(new[] { -5, 4, 10, 0, -9 }).ToList());
+			CollectionAssert.AreEqual(new []{ -5, -9 }, FilterWithFunc.KeepNegativeNumbers(new[] { -5, 4, 10, 0, -9 }).ToList());
+			CollectionAssert.AreEqual(new []{ 0 }, FilterWithFunc.FilterNumbers(new[] { -5, 4, 10, 0, -9 }, x => x == 0).ToList());
 			shouldShowHint = false;
 		}
 

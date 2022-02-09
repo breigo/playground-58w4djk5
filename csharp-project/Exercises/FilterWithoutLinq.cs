@@ -1,5 +1,6 @@
 // { autofold
 
+using System;
 using System.Collections.Generic;
 
 namespace Answer
@@ -22,9 +23,9 @@ namespace Answer
             return positiveNumbers;
         }
 
-        private static bool IsGreaterThanZero(int i)
+        public static bool IsGreaterThanZero(int x)
         {
-            return i > 0;
+            return x > 0;
         }
 // { autofold
     }
