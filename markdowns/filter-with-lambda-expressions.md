@@ -21,8 +21,8 @@ the first tpye is the input type (`int`) and the second type is the return type 
 Func<int, bool> greaterZero = IsGreaterThanZero;
 ```
 You can also have more than one input types.
-`Func<int, int, bool>` for example, takes two ints as input and returns a boolean.
-The last type is always the method's return type and the types before define the method's input types (one per argument)
+For example, `Func<int, int, bool>` takes two ints as input and returns a boolean.
+The last type is always the method's return type and the types before define the method's input types (one per argument).
 
 # Here is the code
 
