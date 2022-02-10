@@ -2,18 +2,26 @@ title: C# LINQ Introduction
 plan:
 - title: Welcome
   statement: markdowns/welcome.md
-- title: "What is LINQ?"
-  statement: markdowns/what-is-linq.md
-- title: "Enumerables in .Net"
-  statement: markdowns/enumerables.md
-- title: "Filtering data - A first approach"
-  statement: markdowns/filter-without-linq.md
-- title: "Filtering data - A more flexible approach"
-  statement: markdowns/filter-with-func.md
-- title: "Filtering data with lambda expressions"
-  statement: markdowns/filter-with-lambda-expressions.md
-- title: "Filtering data with LINQ methods"
-  statement: markdowns/filter-with-linq.md
+- title: LINQ Background
+  description: We make our way to LINQ
+  plan:
+  - title: What is LINQ?
+    statement: markdowns/what-is-linq.md
+  - title: Enumerables in .Net
+    statement: markdowns/enumerables.md
+  - title: Filtering data - A first approach
+    statement: markdowns/filter-without-linq.md
+  - title: Filtering data - A more flexible approach
+    statement: markdowns/filter-with-func.md
+  - title: Filtering data with lambda expressions
+    statement: markdowns/filter-with-lambda-expressions.md
+  - title: Filtering data with LINQ methods
+    statement: markdowns/filter-with-linq.md
+- title: LINQ applied
+  description: We use LINQ
+  plan:
+  - title: "A"
+    statement: markdowns/welcome.md
 projects:
   csharp:
     root: /csharp-project
