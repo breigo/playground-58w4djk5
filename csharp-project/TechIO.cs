@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
+using Answer;
 
 namespace TechIo
 {
@@ -19,6 +21,22 @@ namespace TechIo
         public static Boolean ExistsInFile(String path, String keyword) 
         {
             return File.ReadAllText(path).Contains(keyword);
+        }
+
+        public static void PrintMessage(string channel, IEnumerable<Person> people)
+        {
+            if (people == null)
+            {
+                PrintMessage(channel, "<null>");
+                return;
+            }
+
+            PrintMessage(channel, "new List<Person> {");
+            foreach (var person in people)
+            {
+                PrintMessage(channel, "  new Person { Name = \"" + person.Name + "\", Age = " + person.Age + " }");
+            }
+            PrintMessage(channel, "}");
         }
     }
 }

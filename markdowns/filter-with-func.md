@@ -34,7 +34,7 @@ Instead, we call the `filterPredicate` argument as a function.
 
 Our `KeepPositiveNumbers` method from the previous example now can call `FilterNumbers` and pass in `IsGreaterThanZero` as the filter predicate.
 
-We've also implemented `KeepNegativeNumbers` and a filter method `IsSMallerThanZero`.
+We've also implemented `KeepNegativeNumbers` and a filter method `IsSmallerThanZero`.
 The only difference is, that we directly pass `IsSmallerThanZero` as delegate function without assigning it to a variable.
 
 # This is it?

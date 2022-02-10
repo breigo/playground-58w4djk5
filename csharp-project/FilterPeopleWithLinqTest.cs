@@ -13,7 +13,12 @@ namespace TechIo
 		public void Verify() 
 		{
 			shouldShowHint = true;
-			CollectionAssert.AreEqual(People.Instance.Where(x => x.Age >= 30).ToList(), FilterPeopleWithLinq.KeepAdults(People.Instance).ToList());
+			TechIO.PrintMessage("Input", People.Instance);
+			var expected = People.Instance.Where(x => x.Age >= 30).ToList();
+			var actual = FilterPeopleWithLinq.KeepAdults(People.Instance).ToList();
+			TechIO.PrintMessage("Output", "TODO 2");
+			
+			CollectionAssert.AreEqual(expected, actual);
 			shouldShowHint = false;
 		}
 

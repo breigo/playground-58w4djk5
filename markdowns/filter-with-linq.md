@@ -50,3 +50,11 @@ public class Person {
 ## Apply LINQ to people
 
 @[Filtering with LINQ]({"stubs": ["Exercises/FilterPeopleWithLinq.cs"],"command": "TechIo.FilterPeopleWithLinqTest.Verify"})
+
+# This is LINQ!
+
+We have now applied LINQ to filter our data by passing a predicate to the `Where` method.
+
+But there is more then `Where`. As in .Net 6 there are 63 other LINQ methods you can apply to collections to filter, order, group or transform your data.
+
+We will cover the most common ones in the next fiew sections.
