@@ -37,3 +37,15 @@ This is our *filter* mehtod, that decides if we should keep a value or discard i
 Of course, we could have simply written the expression in the `if` statement, but as filters get more complex they won't fit in a single line.
 E.g. imagine we don't want to filter for positive numbers but for prime numbers. 
 That's not a simple expression any more.
+
+
+# It works, we are done
+
+Now time passes by and you have another requirement, that you want to keep only negative numbers.
+
+You have to implement a new filter method for that. 😠😠😠
+
+Or is there a more flexible way?
+What if we could pass our expression to the filter method before as function pointer or delegate?
+
+Luckily, whe have a delegate type called `System.Func<>`.

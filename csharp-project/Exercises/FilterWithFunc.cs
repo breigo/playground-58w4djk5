@@ -26,12 +26,12 @@ namespace Answer
         public static IEnumerable<int> KeepPositiveNumbers(IEnumerable<int> numbers)
         {
             Func<int, bool> greaterZero = IsGreaterThanZero;
-            return  FilterNumbers(numbers, greaterZero);
+            return FilterNumbers(numbers, greaterZero);
         }
         
         public static IEnumerable<int> KeepNegativeNumbers(IEnumerable<int> numbers)
         {
-            return  FilterNumbers(numbers, IsSmallerThanZero);
+            return FilterNumbers(numbers, IsSmallerThanZero);
         }
 
         public static bool IsGreaterThanZero(int x)

@@ -1,25 +1,21 @@
 # Filtering data - A more flexible approach
 
-Now time passes by and you have another requirement, that you want to keep only negative numbers.
+The type `System.Func<>` allows us to assign a function to a variable or an argument of a method.
 
-You have to implement a new filter method for that. 😠😠😠
-
-Or is there a more flexible way?
-
-What if we could pass our expression to the filter method before as function pointer or delegate?
-
-# Here comes the Func
-
-Luckily, whe have a delegate type called `System.Func<>`.
-With this type we can assign a function to a variable or an argument of a method.
-
-`Func<>` is a generic type (like `IEnumerable<T>`) but with at least 2 template parameters.
+`Func<>` is a generic type (like `IEnumerable<T>`) with at least 2 template parameters.
 
 For example, we can assign the `IsGreaterThanZero` method to a variable of type `Func<int, bool>`, where
 the first tpye is the input type (`int`) and the second type is the return type (`bool`).
+We can then "call" the variable with an argument.
+
 ```c#
 Func<int, bool> greaterZero = IsGreaterThanZero;
+
+Console.WriteLine(greaterZero(10)) // true
+Console.WriteLine(greaterZero(-4)) // false
 ```
+
+
 You can also have more than one input types.
 For example, `Func<int, int, bool>` takes two ints as input and returns a boolean.
 The last type is always the method's return type and the types before define the method's input types (one per argument).
@@ -38,7 +34,8 @@ Instead, we call the `filterPredicate` argument as a function.
 
 Our `KeepPositiveNumbers` method from the previous example now can call `FilterNumbers` and pass in `IsGreaterThanZero` as the filter predicate.
 
-We've also implemented `KeepNegativeNumbers` and a filter method `IsSMallerThanZero` the same way.
+We've also implemented `KeepNegativeNumbers` and a filter method `IsSMallerThanZero`.
+The only difference is, that we directly pass `IsSmallerThanZero` as delegate function without assigning it to a variable.
 
 # This is it?
 

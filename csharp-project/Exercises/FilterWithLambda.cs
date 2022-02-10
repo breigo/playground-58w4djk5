@@ -26,12 +26,12 @@ namespace Answer
         public static IEnumerable<int> KeepPositiveNumbers(IEnumerable<int> numbers)
         {
             Func<int, bool> greaterZero = x => x > 0;
-            return  FilterNumbers(numbers, greaterZero);
+            return FilterNumbers(numbers, greaterZero);
         }
         
         public static IEnumerable<int> KeepNegativeNumbers(IEnumerable<int> numbers)
         {
-            return  FilterNumbers(numbers, x => x < 0);
+            return FilterNumbers(numbers, x => x < 0);
         }
 // { autofold
     }
