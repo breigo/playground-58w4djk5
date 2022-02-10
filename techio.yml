@@ -27,7 +27,7 @@ plan:
   - title: "Skip and Take elements"
     statement: markdowns/linq-skip-take.md
   - title: "Sort with OrderBy"
-    statement: markdowns/linq-skip-take.md
+    statement: markdowns/linq-sort.md
   - title: "Projections with Select"
     statement: markdowns/linq-skip-take.md
   - title: "First, Last and Single element"
