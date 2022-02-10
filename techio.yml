@@ -1,7 +1,9 @@
 title: C# LINQ Introduction
 plan:
-- title: Welcome
-  statement: markdowns/welcome.md
+- title: About this tutorial
+  plan:
+  - title: Welcome
+    statement: markdowns/welcome.md
 - title: LINQ Background
   description: We make our way to LINQ
   plan:
