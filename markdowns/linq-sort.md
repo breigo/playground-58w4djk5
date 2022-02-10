@@ -38,6 +38,4 @@ After calling `OrderBy` we get new LINQ methods to chain:
 
 Note: Calling `OrderBy` twice would not lead to our expected result, because the second call to `OrderBy` would sort the collection again. Instead, calling `ThenBy` after `OrderBy` performs a subsequent ordering.
 
-## Example
-
 @[OrderBy]({"stubs": ["Exercises/SortPeopleWithLinq.cs"],"command": "TechIo.SortPeopleWithLinqTest.Verify"})

@@ -20,7 +20,7 @@ namespace TechIo
 				.ThenByDescending(p => p.Age)
 				.ToList();
 			
-			var actual = FilterPeopleWithLinq.KeepAdults(People.Instance).ToList();
+			var actual = SortPeopleWithLinq.SortByNameAndAge(People.Instance).ToList();
 			
 			TechIO.PrintMessage("Output", actual);
 			
