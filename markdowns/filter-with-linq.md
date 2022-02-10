@@ -23,7 +23,7 @@ So how can we apply LINQ to our example of filtering positive and negative numbe
 Let's jump right down to the code level. 
 As you allready know about lambda expressions and how to pass them as argument to a method, writing LINQ method syntax queries is quite self explaining.
 
-@[Filtering with lambda expressions]({"stubs": ["Exercises/FilterWithLinq.cs"],"command": "TechIo.FilterWithLinqTest.Verify"})
+@[Filtering with LINQ]({"stubs": ["Exercises/FilterWithLinq.cs"],"command": "TechIo.FilterWithLinqTest.Verify"})
 
 ## The code explained
 
@@ -31,3 +31,22 @@ Yes, this is it! What should I say?
 
 `KeepPositiveNumbers` returns all numbers `x`, where `x` is larger than 0.
 `KeepNegativeNumbers` returns all numbers `x`, where `x` is smaller than 0.
+
+
+# LINQ to Objects
+
+Applying LINQ methods to `IEnumerable<T>` is also called *LINQ to Objects*.
+
+For the next chapters let us use real objects instead of primitive data types such as `int`.
+We habe a `Person` wiht a `Name` and `Age` (years from date of birth until now).
+
+```c#
+public class Person {
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+```
+
+## Apply LINQ to people
+
+@[Filtering with LINQ]({"stubs": ["Exercises/FilterPeopleWithLinq.cs"],"command": "TechIo.FilterPeopleWithLinqTest.Verify"})
