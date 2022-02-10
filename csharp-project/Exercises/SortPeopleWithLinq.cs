@@ -11,15 +11,15 @@ namespace Answer
         /// <summary>
         /// Returns a sorted collection of people.
         ///
-        /// We first order the list by name (ascending) and then by age (descending).
+        /// We first order the list by age (ascending) and then by name (descending).
         /// </summary>
         /// <param name="people">A collection of person objects</param>
         /// <returns>A collection of person objects</returns>
         public static IEnumerable<Person> SortByNameAndAge(IEnumerable<Person> people)
         {
             return people
-                .OrderBy(p => p.Name)
-                .ThenByDescending(p => p.Age);
+                .OrderBy(p => p.Age)
+                .ThenByDescending(p => p.Name);
         }
 // { autofold
     }
