@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Answer;
 
 namespace TechIo
@@ -31,12 +32,10 @@ namespace TechIo
                 return;
             }
 
-            PrintMessage(channel, "new List<Person> {");
             foreach (var person in people)
             {
-                PrintMessage(channel, "  new Person { Name = \"" + person.Name + "\", Age = " + person.Age + " }");
+                PrintMessage(channel, $"{person.Name} ({person.Age})");
             }
-            PrintMessage(channel, "}");
         }
     }
 }
