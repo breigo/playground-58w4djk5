@@ -6,11 +6,13 @@ plan:
   statement: markdowns/what-is-linq.md
 - title: "Enumerables in .Net"
   statement: markdowns/enumerables.md
-- title: "Filtering data without LINQ"
+- title: "Filtering data - A first approach"
   statement: markdowns/filter-without-linq.md
-- title: "Lambda expressions"
+- title: "Filtering data - A more flexible approach"
+  statement: markdowns/filter-with-func.md
+- title: "Filtering data with lambda expressions"
   statement: markdowns/filter-with-lambda-expressions.md
-- title: "Filtering with LINQ and lambda expressions"
+- title: "Filtering data with LINQ methods"
   statement: markdowns/filter-with-linq.md
 projects:
   csharp:

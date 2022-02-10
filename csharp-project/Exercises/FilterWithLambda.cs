@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Answer
 {
-    public class FilterWithFunc
+    public class FilterWithLambda
     {
 // }
         public static IEnumerable<int> FilterNumbers(IEnumerable<int> numbers, Func<int, bool> filterPredicate)
@@ -25,23 +25,13 @@ namespace Answer
         
         public static IEnumerable<int> KeepPositiveNumbers(IEnumerable<int> numbers)
         {
-            Func<int, bool> greaterZero = IsGreaterThanZero;
+            Func<int, bool> greaterZero = x => x > 0;
             return  FilterNumbers(numbers, greaterZero);
         }
         
         public static IEnumerable<int> KeepNegativeNumbers(IEnumerable<int> numbers)
         {
-            return  FilterNumbers(numbers, IsSmallerThanZero);
-        }
-
-        public static bool IsGreaterThanZero(int x)
-        {
-            return x > 0;
-        }
-
-        public static bool IsSmallerThanZero(int x)
-        {
-            return x < 0;
+            return  FilterNumbers(numbers, x => x < 0);
         }
 // { autofold
     }

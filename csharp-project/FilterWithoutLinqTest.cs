@@ -28,7 +28,7 @@ namespace TechIo
 			} 
 			else
 			{
-				TechIO.PrintMessage("Kudos 🌟", "You can filter positive integers!");
+				TechIO.PrintMessage("Kudos 🌟", "You can filter integers!");
 			}
 		}
     }

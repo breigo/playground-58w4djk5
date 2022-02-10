@@ -1,9 +1,4 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fb436a23_002D288f_002D4930_002Da2d2_002D4186025c3759/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="UniverseTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;MSTest::D2BD3FDC-D2C9-3621-9A3B-9CE97E243B88::.NETCoreApp,Version=v1.1::TechIo.UniverseTest&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::D2BD3FDC-D2C9-3621-9A3B-9CE97E243B88::.NETCoreApp,Version=v1.1::TechIo.FilterWithoutLinqTests.Verify&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::D2BD3FDC-D2C9-3621-9A3B-9CE97E243B88::.NETCoreApp,Version=v1.1::TechIo.FilterWithoutLinqTest.Verify&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::D2BD3FDC-D2C9-3621-9A3B-9CE97E243B88::.NETCoreApp,Version=v1.1::TechIo.FilterWithFuncTest.Verify&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+  &lt;Project Location="D:\BRG\DEV\tech.io\playground-58w4djk5\csharp-project" Presentation="&amp;lt;csharp-project&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
