@@ -22,8 +22,16 @@ plan:
 - title: LINQ applied
   description: We use LINQ
   plan:
-  - title: "A"
-    statement: markdowns/welcome.md
+  - title: "Filter with Where"
+    statement: markdowns/linq-where.md
+  - title: "Skip and Take elements"
+    statement: markdowns/linq-skip-take.md
+  - title: "Sort with OrderBy"
+    statement: markdowns/linq-skip-take.md
+  - title: "Projections with Select"
+    statement: markdowns/linq-skip-take.md
+  - title: "First, Last and Single element"
+    statement: markdowns/linq-skip-take.md
 projects:
   csharp:
     root: /csharp-project
