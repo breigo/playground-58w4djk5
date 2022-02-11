@@ -11,7 +11,7 @@ namespace Answer
         public static IEnumerable<int> FilterNumbers(IEnumerable<int> numbers, Func<int, bool> filterPredicate)
         {
             var filteredNumbers = new List<int>();
-
+            
             foreach (var number in numbers)
             {
                 if (filterPredicate(number))

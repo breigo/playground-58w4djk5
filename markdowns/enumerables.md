@@ -1,8 +1,7 @@
 # Enumerables in .Net
 
-We start with *enumerables*.
-
-An enumerable in .Net is an object that allows you to enumerate over collection elements.
+We start with **Enumerables**.
+An enumerable in .Net is an object that allows you to enumerate a collection elements.
 
 ## Arrays
 
@@ -41,7 +40,7 @@ Another common type of enumerables are lists. In contrast to arrays, lists can s
 var numbers = new List<int> { 1, 2, 3 };
 ```
 
-Again, you can access the values by index, or enumerate them
+Again, you can access the values by index, or enumerate them.
 
 ```c#
 // Access element by index
@@ -64,7 +63,7 @@ foreach(int number in numbers)
 
 ## Sets
 
-Let's introduce a third type of enumerables: sets.
+A third type of enumerables would be sets.
 Sets contain unique elements.
 A `HashSet` for example provides high-performance set operations (e.g. `UnionWith`, `IntersectWith`...).
 
@@ -72,10 +71,10 @@ A `HashSet` for example provides high-performance set operations (e.g. `UnionWit
 var numbers = new HashSet<int>() {1, 2, 3};
 ```
 
-In contrast to the previous two examples of arrays and lists, you cannot access an element of a set by index. 
-There is no concept of a *first* or *second* element in a set.
+In contrast to the previous two examples of arrays and lists, you cannot access an element of a set by an index. 
+There is no such concept of "index of an element" in a set.
 
-However, you can still enumerate the set values.
+However, you can still enumerate the values stored in the set.
 
 ```c#
 // Enumerate values
@@ -93,7 +92,7 @@ foreach(int number in numbers)
 
 ## And many more
 
-There are many other types of enumerables in .Net containing dictionaries, queues, stacks as well as other lists and sets than preseted here.
+There are many other types of enumerables in .Net containing dictionaries, queues, stacks as well as other spezilized lists and sets.
 
 
 # The common ground
@@ -102,19 +101,19 @@ Although all enumerable types have different purposes and methods they have on c
 
 **They all realize the same interface `IEnumerable<T>`.**
 
-As enumerables are so fundamental in .Net, there is a declarative language construct in C# (and other .Net languages).
+As enumerables are so fundamental in .Net, there is a declarative language construct in C# (and other .Net languages) that makes working with enumerables easy.
 
-We have seen it before: **the `foreach` loop.**
+We have seen it before: **The `foreach` loop.**
 
 ::: How it works (advanced, open if you want to take a look under the hood)
 
 The `IEnumerable<T>` gives you access to an *enumerator*.
-The enumerator can return *next* element. What *next* means depends on the implementation of the enumerable.
+The enumerator can return the *next* element. What *next* means depends on the implementation of the enumerable.
 
-`foreach` operates on `IEnumerable<T>` objects.
-It accesses the *enumerator's* *next* element in each iteration and assigns it to the specified variable, until the enumerator has no *next* element.
+A `foreach` loop operates on an `IEnumerable<T>` object.
+It accesses the *enumerator's* *next* element in each iteration and assigns it to the specified variable, until the enumerator has no *next* element any more.
 
-You write:
+In your code you write:
 ```c#
 foreach(var number in numbers)
 {
@@ -140,7 +139,13 @@ finally
 ```
 :::
 
-## One more note: Generics
-The interface is generic, which means that elements are strongly typed, but you can define the type in your code. `T` is the placehoder for the type you can specify.
+## One additional note: Generics types
+The type `IEnumerable<T>` is a generic type.
+This means means that the enumerable is strongly typed, but you can define the type in your code. 
+*Strongly typed* means, that it can hold only elements of the specified type (or elements that can be implicitly converted to this type).
+`T` is the template type, a placehoder for the type you specify.
 
-A `List<int>` (list of integers) for example is an `IEnumerable<int>` is an enumerable of integers.
+A `List<int>` (list of integers) for example is an `IEnumerable<int>` (enumerable of integers).
+You can add `int` values to the list.
+You can also add `byte` values to the list (as they can be converted to `int` automatically, i.e. implicitly, without loss).
+However, you can not add `string` or `long` values to the list. The former cannot be converted to an integer at all, the latter could be converted to an integer, but with a possible data loss and this is never done automatically.
