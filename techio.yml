@@ -29,9 +29,9 @@ plan:
   - title: "Sort with OrderBy"
     statement: markdowns/linq-sort.md
   - title: "Projections with Select"
-    statement: markdowns/linq-skip-take.md
+    statement: markdowns/linq-select.md
   - title: "First, Last and Single element"
-    statement: markdowns/linq-skip-take.md
+    statement: markdowns/linq-single-elements.md
 projects:
   csharp:
     root: /csharp-project

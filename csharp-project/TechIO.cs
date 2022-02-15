@@ -24,6 +24,18 @@ namespace TechIo
             return File.ReadAllText(path).Contains(keyword);
         }
 
+        public static void PrintMessage(string channel, Person person)
+        {
+            if (person == null)
+            {
+                PrintMessage(channel, "<null>");
+            }
+            else
+            {
+                PrintMessage(channel, $"{person.Name} ({person.Age})");
+            }
+        }
+
         public static void PrintMessage(string channel, IEnumerable<Person> people)
         {
             if (people == null)
@@ -34,7 +46,7 @@ namespace TechIo
 
             foreach (var person in people)
             {
-                PrintMessage(channel, $"{person.Name} ({person.Age})");
+                PrintMessage(channel, person);
             }
         }
     }
