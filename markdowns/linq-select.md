@@ -1,9 +1,9 @@
 # Projections with Select
 
-In many cases you want to transform data from one representation into another.
+With LINQ, you also can transform data from one representation into another.
 
-With the `Select()` function you can project each element of a sequence into a new form.
-The function takes transformation function as argument.
+The `Select()` method allows you to project each element of a sequence into a new form.
+The method takes a transformation function as argument.
 
 
 Here is a simple example. From a list of numbers, calculate the squeare number of each element.
@@ -16,7 +16,7 @@ var squares = numbers.Select(x => x * X);   // 1, 4, 9, 16, 25
 In the example above, the transformation function `x => x * X` is called for evrey element of `numbers`.
 This projects the sequence of integers (`numbers`) to a new sequence of integers (`squares`).
 
-But with `Select` you can also create sequences with a different type.
+But with `Select` you can also transform the type of a sequence.
 
 Here is another example. From a list of person objects, select only the names.
 
@@ -37,4 +37,4 @@ var names = people.Select(p => p.Name);
 //  "Caiden Leonard"
 ```
 
-The example above projects the `IEnumerable<Person>` into an `IEnumerable<string>`.
+The example above projects the `IEnumerable<Person>` to an `IEnumerable<string>`.
