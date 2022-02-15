@@ -2,7 +2,7 @@
 
 With LINQ, you also can transform data from one representation into another.
 
-The `Select()` method allows you to project each element of a sequence into a new form.
+The `Select(transformationFunction)` method allows you to project each element of a sequence into a new form.
 The method takes a transformation function as argument.
 
 
@@ -10,10 +10,10 @@ Here is a simple example. From a list of numbers, calculate the squeare number o
 
 ```c#
 var numbers = new [] { 1, 2, 3, 4, 5 };
-var squares = numbers.Select(x => x * X);   // 1, 4, 9, 16, 25
+var squares = numbers.Select(x => x * x);   // 1, 4, 9, 16, 25
 ```
 
-In the example above, the transformation function `x => x * X` is called for evrey element of `numbers`.
+In the example above, the transformation function `x => x * x` is called for evrey element of `numbers`.
 This projects the sequence of integers (`numbers`) to a new sequence of integers (`squares`).
 
 But with `Select` you can also transform the type of a sequence.

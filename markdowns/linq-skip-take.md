@@ -1,8 +1,10 @@
 # Take or skip some elements in the collection
 
 The next two methods we discuss are
-* `Take(int)` and
-* `Skip(int)`
+* `Take(numberOfElements)` and
+* `Skip(numberOfElements)`
+
+Both methods expect the number of elements as `integer` value as input.
 
 `Take` returns the first `n` elements:
 
@@ -23,7 +25,7 @@ You can also combine the methods:
 ```c#
 var numbers = new [] { 1, 2, 3, 4, 5, 6 };
 var result = numbers
-    .Skip(1)
+    .Skip(1)    // 2, 3, 4, 5, 6
     .Take(3);   // 2, 3, 4
 ```
 
