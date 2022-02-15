@@ -32,6 +32,11 @@ plan:
     statement: markdowns/linq-select.md
   - title: "First, Last and Single element"
     statement: markdowns/linq-single-elements.md
+- title: What's next?
+  description: Final words
+  plan:
+  - title: "Conclusion"
+    statement: markdowns/conclusion.md
 projects:
   csharp:
     root: /csharp-project
