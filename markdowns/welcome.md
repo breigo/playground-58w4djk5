@@ -1,12 +1,10 @@
 # Welcome!
 
-This tutorial gives you a quick introduction into **LINQ** in C#.
+This tutorial gives you a quick introduction into **LINQ** in **C#**.
 
 ## What to expect
-We will take a look at the method syntax of LINQ and introduce basic LINQ methods in a hands on training.
+We will take a look at the method syntax of LINQ and introduce basic LINQ methods with executable examples.
 It's an introduction to the topic, not a deep dive.
-
-You will write some code and test your knowledge.
 
 Topics covered are:
 * LINQ methods

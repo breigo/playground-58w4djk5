@@ -14,18 +14,13 @@ namespace Answer
 
             foreach (var number in numbers)
             {
-                if (IsGreaterThanZero(number))
+                if (number > 0)
                 {
                     positiveNumbers.Add(number);
                 }
             }
 
             return positiveNumbers;
-        }
-
-        public static bool IsGreaterThanZero(int x)
-        {
-            return x > 0;
         }
 // { autofold
     }

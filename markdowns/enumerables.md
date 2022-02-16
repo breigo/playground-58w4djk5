@@ -1,7 +1,7 @@
 # Enumerables in .Net
 
 We start with **Enumerables**.
-An enumerable in .Net is an object that allows you to enumerate a collection elements.
+An enumerable in .Net is an object that allows you to enumerate a collection of elements.
 
 ## Arrays
 
@@ -34,10 +34,10 @@ foreach(int number in numbers)
 
 ## Lists
 
-Another common type of enumerables are lists. In contrast to arrays, lists can store a variable number of elements.
+Another common type of enumerables are lists. In contrast to arrays, lists have a variable size.
 
 ```c#
-var numbers = new List<int> { 1, 2, 3 };
+var numbers = new List<int>() { 1, 2, 3 };
 ```
 
 Again, you can access the values by index, or enumerate them.
@@ -63,15 +63,15 @@ foreach(int number in numbers)
 
 ## Sets
 
-A third type of enumerables would be sets.
+A third type of enumerables sets.
 Sets contain unique elements.
-A `HashSet` for example provides high-performance set operations (e.g. `UnionWith`, `IntersectWith`...).
+The `HashSet` class for example, provides high-performance set operations (e.g. `UnionWith`, `IntersectWith`...).
 
 ```c#
 var numbers = new HashSet<int>() {1, 2, 3};
 ```
 
-In contrast to the previous two examples of arrays and lists, you cannot access an element of a set by an index. 
+In contrast to the previous two examples of arrays and lists, you cannot access an element of a set by it's index. 
 There is no such concept of "index of an element" in a set.
 
 However, you can still enumerate the values stored in the set.
@@ -92,7 +92,7 @@ foreach(int number in numbers)
 
 ## And many more
 
-There are many other types of enumerables in .Net containing dictionaries, queues, stacks as well as other spezilized lists and sets.
+There are many other types of enumerables in .Net, e.g. dictionaries, queues, stacks as well as other spezilized lists and sets.
 
 
 # The common ground
@@ -101,50 +101,26 @@ Although all enumerable types have different purposes and methods they have on c
 
 **They all realize the same interface `IEnumerable<T>`.**
 
-As enumerables are so fundamental in .Net, there is a declarative language construct in C# (and other .Net languages) that makes working with enumerables easy.
+As enumerables are so fundamental in .Net, there is a declarative language construct in C# that makes working with enumerables easy.
 
 We have seen it before: **The `foreach` loop.**
 
-::: How it works (advanced, open if you want to take a look under the hood)
-
-The `IEnumerable<T>` gives you access to an *enumerator*.
-The enumerator can return the *next* element. What *next* means depends on the implementation of the enumerable.
-
-A `foreach` loop operates on an `IEnumerable<T>` object.
-It accesses the *enumerator's* *next* element in each iteration and assigns it to the specified variable, until the enumerator has no *next* element any more.
-
-In your code you write:
 ```c#
-foreach(var number in numbers)
+// Enumerate values
+foreach(var element in objectOfTypeIEnumerable)
 {
-    // Your code here
+    // work with the element
 }
 ```
 
-The compiler converts it to something like this:
-```c#
-try
-{
-    int number;
-    IEnumerator<int> numbersEnumerator = numbers.GetEnumerator();
-    while(numbersEnumerator.MoveNext()) {
-        number = numbersEnumerator.Current;
-        // Your code here
-    }
-}
-finally
-{
-    numbersEnumerator.Dispose()
-}
-```
-:::
 
 ## One additional note: Generics types
-The type `IEnumerable<T>` is a generic type.
-This means means that the enumerable is strongly typed, but you can define the type in your code. 
+The interface `IEnumerable<T>` is a generic interface.
+This means means that the enumerable is strongly typed, but you can define the concrete type in your code. 
 *Strongly typed* means, that it can hold only elements of the specified type (or elements that can be implicitly converted to this type).
 `T` is the template type, a placehoder for the type you specify.
 
+The type `List<T>` is also a generic type.
 A `List<int>` (list of integers) for example is an `IEnumerable<int>` (enumerable of integers).
 You can add `int` values to the list.
 You can also add `byte` values to the list (as they can be converted to `int` automatically, i.e. implicitly, without loss).

@@ -24,6 +24,25 @@ namespace TechIo
             return File.ReadAllText(path).Contains(keyword);
         }
 
+        public static void PrintMessage(string channel, IEnumerable<int> numbers)
+        {
+            if (numbers == null)
+            {
+                PrintMessage(channel, "<null>");
+            }
+            else
+            {
+                if (!numbers.Any()) {
+                    PrintMessage(channel, "<empty>");
+                }
+                else
+                {
+                    var stringNumbers = numbers.Select(n => n.ToString()).ToArray();
+                    PrintMessage(channel, string.Join(", ", stringNumbers));
+                }
+            }
+        }
+
         public static void PrintMessage(string channel, Person person)
         {
             if (person == null)
@@ -41,6 +60,11 @@ namespace TechIo
             if (people == null)
             {
                 PrintMessage(channel, "<null>");
+                return;
+            }
+
+            if (!people.Any()) {
+                PrintMessage(channel, "<empty>");
                 return;
             }
 
