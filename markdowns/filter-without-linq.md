@@ -21,7 +21,7 @@ the numbers and add the positive values to the new list.
 
 ## The code explained
 
-We successfully created a method where we can pour in a any numbers but out only get out a positive numbers.
+We successfully created a method where we can pass a list of numbers but out only get out a positive numbers.
 
 The method accepts any `IEnumerable<int>` and also returns an `IEnumerable<int>`, so the method works with
 Arrays, Lists or other data structures that realize the `IEnumerable<int>` interface.
@@ -39,6 +39,4 @@ Now time passes by and you have another requirement, that you want to keep only 
 You have to implement a new filter method for that. 😠😠😠
 
 Or is there a more flexible way?
-What if we could pass our expression to the filter method before as function pointer or delegate?
-
-Luckily, whe have a delegate type called `System.Func<>`.
+What if we could pass our expression to the filter method in some way?
