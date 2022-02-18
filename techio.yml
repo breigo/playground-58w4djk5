@@ -9,7 +9,7 @@ plan:
   plan:
   - title: What is LINQ?
     statement: markdowns/what-is-linq.md
-  - title: Enumerables in .Net
+  - title: Enumerables
     statement: markdowns/enumerables.md
   - title: Filtering data - A first approach
     statement: markdowns/filter-without-linq.md

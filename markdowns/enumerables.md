@@ -1,4 +1,4 @@
-# Enumerables in .Net
+# Enumerables
 
 We start with **Enumerables**.
 An enumerable in .Net is an object that allows you to enumerate a collection of elements.
@@ -8,8 +8,11 @@ An enumerable in .Net is an object that allows you to enumerate a collection of 
 The most basic enumerable is an array, which can store a fixed number of typed elements.
 
 ```c#
-var numbers = new int[3] { 1, 2, 3};
+int[] numbers = new int[3] { 1, 2, 3};
 ```
+
+In the example above, we create an integer array that can hold 3 values and initialize the values with 1, 2 and 3.
+We assign that array to a variable of type `int[]` named `numbers`.
 
 You can access each element of an array by index or enumerate the values.
 
@@ -40,11 +43,16 @@ Another common type of enumerables are lists. In contrast to arrays, lists have 
 var numbers = new List<int>() { 1, 2, 3 };
 ```
 
+In the example above, we create a list of integers and initialize it with three values 1, 2 and 3.
+We assign it to a variable called `numbers`.
+This example we use the keyword `var` for the datatype of `numbers`. With `var`, we let the compiler decide which type to use.
+As we assign an object of type `List<int>` the type of the variable will be `List<int>`.
+
 Again, you can access the values by index, or enumerate them.
 
 ```c#
 // Access element by index
-int fistNumber = numbers[0]; // 1
+var fistNumber = numbers[0]; // 1
 ```
 
 ```c#
