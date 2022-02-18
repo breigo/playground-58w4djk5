@@ -13,9 +13,16 @@ namespace TechIo
 		public void Verify() 
 		{
 			shouldShowHint = true;
-			CollectionAssert.AreEqual(new []{ 4, 10 }, FilterWithLambda.KeepPositiveNumbers(new[] { -5, 4, 10, 0, -9 }).ToList());
-			CollectionAssert.AreEqual(new []{ -5, -9 }, FilterWithLambda.KeepNegativeNumbers(new[] { -5, 4, 10, 0, -9 }).ToList());
-			CollectionAssert.AreEqual(new []{ 0 }, FilterWithLambda.FilterNumbers(new[] { -5, 4, 10, 0, -9 }, x => x == 0).ToList());
+			var input = new[] { -5, 4, 10, 0, -9 };
+			
+			TechIO.PrintMessage("Input", input);
+			var actualPositive = FilterWithLambda.KeepPositiveNumbers(input).ToList();
+			var actualNegative = FilterWithLambda.KeepNegativeNumbers(input).ToList();
+			TechIO.PrintMessage("Output - KeepPositiveNumbers", actualPositive);
+			TechIO.PrintMessage("Output - KeepNegativeNumbers", actualNegative);
+
+			CollectionAssert.AreEqual(new []{ 4, 10 }, actualPositive);
+			CollectionAssert.AreEqual(new []{ -5, -9 }, actualNegative);
 			shouldShowHint = false;
 		}
 
