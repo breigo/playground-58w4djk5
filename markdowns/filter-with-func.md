@@ -24,7 +24,7 @@ Console.WriteLine(greaterZero(-4)) // false
 ```
 The first template parameter for `Func<int, bool>` is the input type (`int`) and the second template parameter is the return type (`bool`) of the method.
 
-`Func<>` is a generic type which requires 2 or more template parameters, depending on the number of arguments your method has.
+`Func<>` is a generic type that requires 2 or more template parameters, depending on the number of arguments your method has.
 For example, a method `bool Multiply(int a, int b)` which takes two integer arguments as input and returns a boolean value could be assigned to a variable of type `Func<int, int, bool>`.
 The last template parameter is always the method's return type and the template parameters before define the method's input types (one per argument).
 
@@ -60,10 +60,11 @@ In contrast to `KeepPositiveNumbers` we directly pass `IsSmallerThanZero` as del
 # This is it?
 
 Passing delegate functions as arguments is an elegant way to reduce implementation effort.
-Iterating over the input is always the same and the responsibility for deciding which items are kept is delegated to the caller of the method.
+Iterating over the input is always the same and the decission which items are kept is delegated to the caller of the method.
 
 However, the way we pass the delegate function introduces more complexity on the caller's side.
-A separate method has to be defined and passed to `FilterNumbers` for evrey predicate.
+We require two additional methods to realize one new filter.
+The filter method itself and a method for the filter predicate which we pass to `FilterNumbers`.
 
 But is there an easier way to tell `FilterNumbers` that we want to keep all numbers `x > 0` or `x < 0`?
 
