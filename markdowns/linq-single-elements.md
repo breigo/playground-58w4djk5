@@ -32,7 +32,8 @@ var numbers = new [] { 1, 2, 3, 4, 5 };
 var firstTwoDigitNumber = numbers.First(x => x >= 10);     // throws an Exception. There is no number >= 10
 ```
 
-This behavior is sometimes not intended and you want to return the default value if no elemetn matches the predicate.
+Throwing an exception is sometimes not intended behaviour.
+Instead, you want to return a default value if no element matches the predicate.
 For these use cases LINQ offers:
   
 * `FirstOrDefault(predicate)` returns the first element in the collection that matches the predicate, or the default value, if no element matches the predicate.
