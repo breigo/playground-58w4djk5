@@ -40,7 +40,7 @@ namespace TechIo
 				TechIO.PrintMessage("Expected", Expected);
 
 				// On Failure
-				TechIO.PrintMessage("Hint 💡", "Did you properly implemented the method? 🤔");
+				TechIO.PrintMessage("Hint 💡", "Have you properly implemented the method? 🤔");
 				TechIO.PrintMessage("Hint 💡", "");
 				TechIO.PrintMessage("Hint 💡", "Use Where() to filter elements.");
 				TechIO.PrintMessage("Hint 💡", "Use OrderBy() to sort elements.");

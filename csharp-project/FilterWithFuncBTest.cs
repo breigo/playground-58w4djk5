@@ -31,7 +31,7 @@ namespace TechIo
 			if(shouldShowHint)
 			{	
 				// On Failure
-				TechIO.PrintMessage("Hint 💡", "Did you properly implemented the methods? 🤔");
+				TechIO.PrintMessage("Hint 💡", "Have you properly implemented the methods? 🤔");
 			} 
 			else
 			{
