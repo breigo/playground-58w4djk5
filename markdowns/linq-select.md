@@ -6,7 +6,7 @@ The `Select(transformationFunction)` method allows you to project each element o
 The method takes a transformation function as argument.
 
 
-Here is a simple example. From a list of numbers, calculate the squeare number of each element.
+Here is a simple example. From a collection of numbers, calculate the squeare number of each element.
 
 ```c#
 var numbers = new [] { 1, 2, 3, 4, 5 };
@@ -18,7 +18,7 @@ This projects the sequence of integers (`numbers`) to a new sequence of integers
 
 But with `Select` you can also transform the type of a sequence.
 
-Here is another example. From a list of person objects, select only the names.
+Here is another example. From a collection of person objects, select only the names.
 
 @[Where and Take]({"stubs": ["Exercises/SelectNamesWithLinq.cs"],"command": "TechIo.SelectNamesWithLinqTest.Verify"})
 
