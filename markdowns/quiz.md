@@ -45,8 +45,8 @@ var person = people
 ```
 
 ?[What is the type of the result?]
--[ ] IEnumerable<Person>
--[ ] IEnumerable<string>
+-[ ] IEnumerable\<Person\>
+-[ ] IEnumerable\<string\>
 -[] Person
 -[x] string
 -[] It throws an exception
