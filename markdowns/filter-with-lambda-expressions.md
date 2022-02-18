@@ -37,10 +37,10 @@ In `KeepNegativeNumbers` we directly pass the lambda expression as argument to `
 `KeepPositiveNumbers` and `KeepNegativeNumbers` are now really tight - that's fine.
 
 The only method with some complexity left is `FilterNumbers`.
-Here, we have to iterate over the original `numbers` and add them to `filteredNumbers` if our `filterPredicate` evaluates to true.
+Here, we have to enumerate the original `numbers` and add them to `filteredNumbers` if our `filterPredicate` evaluates to true.
 
 But isn`t the concept of filtering a collection of elements always the same,
-no matter if we have a collection of numbers, or timestamps, or people (person objects)?
+no matter if we have a collection of numbers, or timestamps, or any other type of objects?
 
 It is!
 And finally we are at the heart of this tutorial: LINQ
