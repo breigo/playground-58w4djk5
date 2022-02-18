@@ -29,9 +29,11 @@ var result = people.FirstOrDefault(p => p.Age > 60 && p.Age < 70);
 
 # Example 2 - Writing LINQ
 
-In this example you are requested to write a simple LINQ query:
+In this example you are requested to write a simple LINQ query.
 
-You get a collection of people and shoud return the names from people that are at least (>=) 30 years.
+You get a collection of people and shoud return a sorted list of people that are at least (>=) 30 years.
+
+Use LINQ methods discussed before: `Where`, `Take`, `Skip`, `OrderBy`, `OrderByDescending`, `ThenBy`, `ThenByDescending`, `Select`, `First`, `Last`, `Single`, `FirstOrDefault`, `LastOrDefault`, `SingleOrDefault`.
 
 
 @[Exymple 2]({"stubs": ["Exercises/QuizExample2.cs"],"command": "TechIo.QuizExample2Test.Verify"})

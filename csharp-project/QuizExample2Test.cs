@@ -35,6 +35,7 @@ namespace TechIo
 				TechIO.PrintMessage("Hint 💡", "");
 				TechIO.PrintMessage("Hint 💡", "Use Where() to filter elements.");
 				TechIO.PrintMessage("Hint 💡", "Use OrderBy() to sort elements.");
+				TechIO.PrintMessage("Hint 💡", "You can chain LINQ methods.");
 			} 
 			else
 			{
