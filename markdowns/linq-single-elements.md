@@ -29,15 +29,15 @@ The LINQ methods `First()`, `Last()`, and `Single()` throw an exception, if no e
 ```c#
 var numbers = new [] { 1, 2, 3, 4, 5 };
 
-var firstTwoDigitNumber = numbers.First(x => x >= 10);     // throws an Exception. There is no number > 10
+var firstTwoDigitNumber = numbers.First(x => x >= 10);     // throws an Exception. There is no number >= 10
 ```
 
-This behavior is sometimes not intended.
-For these use cases LINQ offers versions of `First()`, `Last()`, and `Single()` that return a default value if no element matches the predicate:
+This behavior is sometimes not intended and you want to return the default value if no elemetn matches the predicate.
+For these use cases LINQ offers:
   
 * `FirstOrDefault(predicate)` returns the first element in the collection that matches the predicate, or the default value, if no element matches the predicate.
 * `LastOrDefault(predicate)` returns the last element in the collection that matches the pradicate, or the default value, if no element matches the predicate.
-* `SingleOrDefault(predicate)` returns the single element in the collection that matches the predicate, or the default value, if no element matches the predicate. If more than one element matches, the methods throws an exception.
+* `SingleOrDefault(predicate)` returns the only element in the collection that matches the predicate, or the default value, if no element matches the predicate. If more than one element matches, the methods throws an exception.
 
 The *default* value is defined by the type of the element:
 * `0` for integral types (like `int`, `long`, ...)
@@ -57,7 +57,8 @@ You can also use `First()` and `Last()` without a predicate.
 Calling the mehtods without a predicate simply returns the first or last element of the collection.
 
 ```c#
-IEnumerable<int> numbers = new [] { 1, 2, 3, 4, 5 };
-int firstNumber = numbers.First();  // 1
-int lastNumber = numbers.Last();    // 5
+var numbers = new [] { 1, 2, 3, 4, 5 };
+
+var firstNumber = numbers.First();  // 1
+var lastNumber = numbers.Last();    // 5
 ```
