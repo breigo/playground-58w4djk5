@@ -5,7 +5,7 @@ Now it is time to test your knowledge!
 
 We present some statements, you answer the questions.
 
-# Example 1
+# Example 1 - Warmup
 
 ```c#
 var people = new List<Person>()
@@ -26,7 +26,19 @@ var result = people.FirstOrDefault(p => p.Age > 60 && p.Age < 70);
 -[ ] Caiden Leonard
 
 
-# Example 2
+
+# Example 2 - Writing LINQ
+
+In this example you are requested to write a simple LINQ query:
+
+You get a collection of people and shoud return the names from people that are at least (>=) 30 years.
+
+
+@[Exymple 2]({"stubs": ["Exercises/QuizExample2.cs"],"command": "TechIo.QuizExample2Test.Verify"})
+
+
+
+# Example 3 - Understanding LINQ
 
 ```c#
 var people = new List<Person>()
@@ -51,7 +63,7 @@ var result = people
 -[x] string
 -[] It throws an exception
 
-?[Name the person(s) returned in Example 2?](multiple)
+?[Name the person(s) returned in Example 3?](multiple)
 -[ ] Samina Stephenson
 -[ ] Jaydon Heath
 -[x] Imaani Macgregor
