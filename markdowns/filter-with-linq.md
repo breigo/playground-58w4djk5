@@ -23,9 +23,7 @@ But there is more then `Where`. As in .Net 6 there are 63 other LINQ methods you
 We will cover the most common ones in the next sections.
 
 
-Applying LINQ methods to `IEnumerable<T>` is also called *LINQ to Objects*.
-
-For the next chapters we will use real objects instead of primitive data types such as `int`.
+For the next examples we will use real objects instead of primitive data types such as `int`.
 From now on, we use a `Person` wiht a `Name` and `Age` (years from date of birth until now).
 
 ```c#
