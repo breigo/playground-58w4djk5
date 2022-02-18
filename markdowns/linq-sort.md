@@ -19,7 +19,7 @@ var people = new List<Person> {
 var sortedPeople = people.OrderBy(p => p.Age);
 ```
 
-We can also sort the objects by multiple keys, e.g. first by `Name` and then by `Age`.
+We can also sort the objects by multiple keys, e.g. first by `Age` and then by `Name`.
 After calling `OrderBy` we get new LINQ methods to chain:
 
 * `ThenBy(keySelector)` and
@@ -27,4 +27,4 @@ After calling `OrderBy` we get new LINQ methods to chain:
 
 @[OrderBy]({"stubs": ["Exercises/SortPeopleWithLinq.cs"],"command": "TechIo.SortPeopleWithLinqTest.Verify"})
 
-Note: Calling `OrderBy` twice would not lead to the expected result, because the second call to `OrderBy` would sort the collection again. Instead, calling `OrderBy` followed by `ThenBy` leads to the expected result, because `ThenBy` performs a subsequent ordering.
+Note: Calling `OrderBy` twice would not lead to the expected result, because the second call to `OrderBy` would sort the whole collection again. Instead, calling `OrderBy` followed by `ThenBy` leads to the expected result, because `ThenBy` performs a subsequent ordering.
