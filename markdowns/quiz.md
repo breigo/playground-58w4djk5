@@ -5,7 +5,7 @@ Now it is time to test your knowledge!
 
 We present some statements, you answer the questions.
 
-# Eaymple 1
+# Example 1
 
 ```c#
 var people = new List<Person>()
@@ -19,14 +19,14 @@ var people = new List<Person>()
 var result = people.FirstOrDefault(p => p.Age > 60 && p.Age < 70);
 ```
 
-?[Name the person(s) returned in Eaymple 1?](multiple)
+?[Name the person(s) returned in Example 1?](multiple)
 -[ ] Samina Stephenson
 -[ ] Jaydon Heath
 -[x] Imaani Macgregor
 -[ ] Caiden Leonard
 
 
-# Eaymple 2
+# Example 2
 
 ```c#
 var people = new List<Person>()
@@ -45,13 +45,13 @@ var result = people
 ```
 
 ?[What is the type of the result?]
--[ ] IEnumerable\<Person\>
--[ ] IEnumerable\<string\>
+-[ ] IEnumerable&lt;Person&gt;
+-[ ] IEnumerable&lt;string&gt;
 -[] Person
 -[x] string
 -[] It throws an exception
 
-?[Name the person(s) returned in Eaymple 2?](multiple)
+?[Name the person(s) returned in Example 2?](multiple)
 -[ ] Samina Stephenson
 -[ ] Jaydon Heath
 -[x] Imaani Macgregor
