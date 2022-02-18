@@ -3,7 +3,9 @@
 You read a lot so far.
 Now it is time to test your knowledge!
 
-# Warmup
+We present some statements, you answer the questions.
+
+# Number 1
 
 ```c#
 var people = new List<Person>()
@@ -17,7 +19,39 @@ var people = new List<Person>()
 var person = people.FirstOrDefault(p => p.Age > 60 && p.Age < 70);
 ```
 
-?[Who are we looking for (value of person)?]
+?[Whom are we looking for?](multiple)
+-[ ] Samina Stephenson
+-[ ] Jaydon Heath
+-[x] Imaani Macgregor
+-[ ] Caiden Leonard
+
+
+# Number 2
+
+```c#
+var people = new List<Person>()
+{
+    new Person() { Name = "Samina Stephenson", Age = 9 },
+    new Person() { Name = "Jaydon Heath", Age = 82 },
+    new Person() { Name = "Imaani Macgregor", Age = 66 },
+    new Person() { Name = "Caiden Leonard", Age = 52 }
+};
+
+var person = people
+                .Where(x => x.Age >= 30)
+                .Take(2)
+                .Select(x => x.Name)
+                .Last();
+```
+
+?[What is the type of the result?]
+-[ ] IEnumerable<Person>
+-[ ] IEnumerable<string>
+-[] Person
+-[x] string
+-[] It throws an exception
+
+?[Whom are we looking for?](multiple)
 -[ ] Samina Stephenson
 -[ ] Jaydon Heath
 -[x] Imaani Macgregor
