@@ -11,7 +11,7 @@ The most basic enumerable is an array, which can store a fixed number of typed e
 int[] numbers = new int[3] { 1, 2, 3};
 ```
 
-In the example above, we create an integer array that can hold 3 values and initialize the values with 1, 2 and 3.
+In the example above, we create an integer array that can hold 3 values and initialize the array with the values 1, 2 and 3.
 We assign that array to a variable of type `int[]` named `numbers`.
 
 You can access each element of an array by index or enumerate the values.
@@ -45,8 +45,8 @@ var numbers = new List<int>() { 1, 2, 3 };
 
 In the example above, we create a list of integers and initialize it with three values 1, 2 and 3.
 We assign it to a variable called `numbers`.
-This example we use the keyword `var` for the datatype of `numbers`. With `var`, we let the compiler decide which type to use.
-As we assign an object of type `List<int>` the type of the variable will be `List<int>`.
+In this example we use the keyword `var` to define the type of `numbers`. With `var`, we let the compiler decide which type to use.
+As we assign an object of type `List<int>` to `numbers`, the type of the variable will be `List<int>`.
 
 Again, you can access the values by index, or enumerate them.
 
@@ -57,7 +57,7 @@ var fistNumber = numbers[0]; // 1
 
 ```c#
 // Enumerate values
-foreach(int number in numbers)
+foreach(var number in numbers)
 {
     Console.WriteLine(number)
 }
@@ -80,13 +80,13 @@ var numbers = new HashSet<int>() {1, 2, 3};
 ```
 
 In contrast to the previous two examples of arrays and lists, you cannot access an element of a set by it's index. 
-There is no such concept of "index of an element" in a set.
+There is no such concept of "index of an element" in a hash set.
 
 However, you can still enumerate the values stored in the set.
 
 ```c#
 // Enumerate values
-foreach(int number in numbers)
+foreach(var number in numbers)
 {
     Console.WriteLine(number)
 }
@@ -107,7 +107,7 @@ There are many other types of enumerables in .Net, e.g. dictionaries, queues, st
 
 Although all enumerable types have different purposes and methods they have on common characteristic.
 
-**They all realize the same interface `IEnumerable<T>`.**
+**They all realize the same interface, namely `IEnumerable<T>`.**
 
 As enumerables are so fundamental in .Net, there is a declarative language construct in C# that makes working with enumerables easy.
 
@@ -124,11 +124,14 @@ foreach(var element in objectOfTypeIEnumerable)
 
 ## One additional note: Generics types
 The interface `IEnumerable<T>` is a generic interface.
-This means means that the enumerable is strongly typed, but you can define the concrete type in your code. 
+This means that the enumerable is strongly typed but you can define the concrete type in your code. 
 *Strongly typed* means, that it can hold only elements of the specified type (or elements that can be implicitly converted to this type).
 `T` is the template type, a placehoder for the type you specify.
 
 The type `List<T>` is also a generic type.
+The list was implemented to work with any type (`<T>`).
+However, you have to choose the type in your code.
+
 A `List<int>` (list of integers) for example is an `IEnumerable<int>` (enumerable of integers).
 You can add `int` values to the list.
 You can also add `byte` values to the list (as they can be converted to `int` automatically, i.e. implicitly, without loss).
