@@ -130,7 +130,7 @@ This means that the enumerable is strongly typed but you can define the concrete
 
 The type `List<T>` is also a generic type.
 The list was implemented to work with any type (`<T>`).
-However, you have to choose the type in your code.
+However, you have to choose a fixed type in your code.
 
 A `List<int>` (list of integers) for example is an `IEnumerable<int>` (enumerable of integers).
 You can add `int` values to the list.

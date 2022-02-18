@@ -15,20 +15,18 @@ From a list of numbers keep only positive values.
 A first approch to filter the data would be to create a new empty list and then enumerate over
 the numbers and add the positive values to the new list.
 
-# Here is the code
-
 @[First appoach on filtering]({"stubs": ["Exercises/FilterWithoutLinq.cs"],"command": "TechIo.FilterWithoutLinqTest.Verify"})
 
 ## The code explained
 
-We successfully created a method where we can pass a list of numbers but out only get out a positive numbers.
+We successfully created a filter method `KeepPositiveNumbers` where we can pass a list of arbitrary numbers as input and only get out a list of positive numbers.
 
 The method accepts any `IEnumerable<int>` and also returns an `IEnumerable<int>`, so the method works with
-Arrays, Lists or other data structures that realize the `IEnumerable<int>` interface.
+Arrays, Lists or other data structures that realize the `IEnumerable<T>` interface.
 
 ```c#
-var numbers1 = KeepPositiveNumbers(new[] { -5, 4, 10, 0, -9 })
-var numbers2 = KeepPositiveNumbers(new List<int> { -5, 4, 10, 0, -9 })
+var numbers1 = KeepPositiveNumbers(new[] { -5, 4, 10, 0, -9 });
+var numbers2 = KeepPositiveNumbers(new List<int> { -5, 4, 10, 0, -9 });
 ```
 
 
