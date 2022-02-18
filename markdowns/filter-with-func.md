@@ -1,12 +1,9 @@
 # Filtering data - A more flexible approach
 
-The type `System.Func<>` allows us to assign a function to a variable or an argument of a method.
+We want to pass our predicate expression `number > 0` to a filter method.
+This way we can decide, for which numbers we want to filter.
 
-`Func<>` is a generic type (like `IEnumerable<T>`) with at least 2 template parameters.
-
-For example, we can create a predicate method  `bool IsGreaterThanZero(int)` and assign it to a variable of type `Func<int, bool>`.
-The first template parameter for `Func<int, bool>` is the input type (`int`) and the second type is the return type (`bool`) of the method.
-We can then "call" the variable as it would be a method.
+First, we create a dedicated predicate function that encapsulates the expression:
 
 ```c#
 public bool IsGreaterThanZero(int number)
@@ -15,14 +12,24 @@ public bool IsGreaterThanZero(int number)
 }
 ```
 
+Second, we assign that function to a variable.
+The delegate type `System.Func<>` allows us to assign a function to a variable or pass it as an argument to a method.
+We can then "call" the variable as it would be a method.
+
 ```c#
 Func<int, bool> greaterZero = IsGreaterThanZero;
 
 Console.WriteLine(greaterZero(10)) // true
 Console.WriteLine(greaterZero(-4)) // false
 ```
+The first template parameter for `Func<int, bool>` is the input type (`int`) and the second type is the return type (`bool`) of the method.
 
-We can also pass `greaterZero` as argument to filter method.
+`Func<>` is a generic type which requires 2 or more template parameters, depending on the number of arguments ouf your method.
+For example, a method `bool Multiply(int, int)` could be assigne to a variable of type `Func<int, int, bool>`. It takes two integer arguments as input and returns a boolean value.
+The last type is always the method's return type and the types before define the method's input types (one per argument).
+
+
+We can also pass `greaterZero` as argument to a filter method.
 
 @[Filtering with Func<>]({"stubs": ["Exercises/FilterWithFuncA.cs"],"command": "TechIo.FilterWithFuncATest.Verify"})
 
@@ -65,7 +72,8 @@ And the answer is lambda expressions.
 
 
 
+# TODO
 
-You can also have more than one input types.
+`Func<>` is a generic type with 2 or more template parameters, depending on the number of arguments ouf your method. 
 For example, `Func<int, int, bool>` takes two ints as input and returns a boolean.
 The last type is always the method's return type and the types before define the method's input types (one per argument).
