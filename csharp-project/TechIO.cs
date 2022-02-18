@@ -73,5 +73,24 @@ namespace TechIo
                 PrintMessage(channel, person);
             }
         }
+
+        public static void PrintMessage(string channel, IEnumerable<string> strings)
+        {
+            if (strings == null)
+            {
+                PrintMessage(channel, "<null>");
+                return;
+            }
+
+            if (!strings.Any()) {
+                PrintMessage(channel, "<empty>");
+                return;
+            }
+
+            foreach (var str in strings)
+            {
+                PrintMessage(channel, str);
+            }
+        }
     }
 }

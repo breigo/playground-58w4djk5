@@ -20,21 +20,6 @@ But with `Select` you can also transform the type of a sequence.
 
 Here is another example. From a list of person objects, select only the names.
 
-```c#
-var people = new List<Person>() {
-                    new Person() { Name = "Samina Stephenson", Age = 9 },
-                    new Person() { Name = "Jaydon Heath", Age = 82 },
-                    new Person() { Name = "Imaani Macgregor", Age = 66 },
-                    new Person() { Name = "Caiden Leonard", Age = 52 }
-                };
-
-var names = people.Select(p => p.Name);
-
-// names is an IEnumerable<string> with the values:
-//  "Samina Stephenson",
-//  "Jaydon Heath",
-//  "Imaani Macgregor",
-//  "Caiden Leonard"
-```
+@[Where and Take]({"stubs": ["Exercises/SelectNamesWithLinq.cs"],"command": "TechIo.SelectNamesWithLinqTest.Verify"})
 
 The example above projects the `IEnumerable<Person>` to an `IEnumerable<string>`.
