@@ -1,8 +1,8 @@
-# Filter single element
+# Filter one element
 
 In many cases you want to select the first or last element of a collection that satisfies a condition.
 
-While the previous presented methods like `Where()`, `Take()` and `Skip()` return a new collection of elements,
+While the methods presented before like `Where()`, `Take()` and `Skip()` return a new collection of elements,
 there are also LINQ methods that only return a single element:
 
 * `First(predicate)` returns the first element in the collection that matches the predicate.
@@ -14,7 +14,7 @@ There is nothing to filter, sort, or porject after reducing a collection to a si
 
 The following examples call `First()` but `Last()` and `Single()` work the same way.
 
-Here is an example of `First` - return the first adult in the collection.
+Here is an example. Return the first adult in the collection.
 
 @[First]({"stubs": ["Exercises/SelectFirstAdultWithLinq.cs"],"command": "TechIo.SelectFirstAdultWithLinqTest.Verify"})
 
