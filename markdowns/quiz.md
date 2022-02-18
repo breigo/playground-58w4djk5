@@ -5,7 +5,7 @@ Now it is time to test your knowledge!
 
 We present some statements, you answer the questions.
 
-# Number 1
+# Eaymple 1
 
 ```c#
 var people = new List<Person>()
@@ -16,17 +16,17 @@ var people = new List<Person>()
     new Person() { Name = "Caiden Leonard", Age = 52 }
 };
 
-var person = people.FirstOrDefault(p => p.Age > 60 && p.Age < 70);
+var result = people.FirstOrDefault(p => p.Age > 60 && p.Age < 70);
 ```
 
-?[Whom are we looking for?](multiple)
+?[Name the person(s) returned in Eaymple 1?](multiple)
 -[ ] Samina Stephenson
 -[ ] Jaydon Heath
 -[x] Imaani Macgregor
 -[ ] Caiden Leonard
 
 
-# Number 2
+# Eaymple 2
 
 ```c#
 var people = new List<Person>()
@@ -37,7 +37,7 @@ var people = new List<Person>()
     new Person() { Name = "Caiden Leonard", Age = 52 }
 };
 
-var person = people
+var result = people
                 .Where(x => x.Age >= 30)
                 .Take(2)
                 .Select(x => x.Name)
@@ -51,7 +51,7 @@ var person = people
 -[x] string
 -[] It throws an exception
 
-?[Whom are we looking for?](multiple)
+?[Name the person(s) returned in Eaymple 2?](multiple)
 -[ ] Samina Stephenson
 -[ ] Jaydon Heath
 -[x] Imaani Macgregor
