@@ -16,8 +16,8 @@ namespace TechIo
 			TechIO.PrintMessage("Input", People.Instance);
 			
 			var expected = People.Instance
-				.OrderBy(p => p.Age)
-				.ThenByDescending(p => p.Name)
+				.OrderBy(p => p.Name)
+				.ThenByDescending(p => p.Age)
 				.ToList();
 			
 			var actual = SortPeopleWithLinq.SortByNameAndAge(People.Instance).ToList();
