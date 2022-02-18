@@ -17,7 +17,6 @@ namespace Answer
         public static Person GetFirstAdult(IEnumerable<Person> people)
         {
             return people.First(p => p.Age >= 30);
-            
         }
 // { autofold
     }
