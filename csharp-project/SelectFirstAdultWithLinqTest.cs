@@ -15,7 +15,7 @@ namespace TechIo
 			shouldShowHint = true;
 			TechIO.PrintMessage("Input", People.Instance);
 			var expected = People.Instance.First(x => x.Age >= 30);
-			var actual = SelectFirstAdultWithLinq.GetFirstAdult(People.Instance);
+			var actual = new SelectFirstAdultWithLinq().GetFirstAdult(People.Instance);
 			TechIO.PrintMessage("Output", actual);
 			
 			Assert.AreEqual(expected, actual);

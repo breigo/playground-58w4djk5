@@ -8,30 +8,30 @@ namespace Answer
     public class FilterWithFuncB
     {
 // }
-        public static bool IsGreaterThanZero(int x)
+        public bool IsGreaterThanZero(int x)
         {
             return x > 0;
         }
 
-        public static IEnumerable<int> KeepPositiveNumbers(IEnumerable<int> numbers)
+        public IEnumerable<int> KeepPositiveNumbers(IEnumerable<int> numbers)
         {
             Func<int, bool> greaterZero = IsGreaterThanZero;
             return FilterNumbers(numbers, greaterZero);
         }
 
 
-        public static bool IsSmallerThanZero(int x)
+        public bool IsSmallerThanZero(int x)
         {
             return x < 0;
         }
         
-        public static IEnumerable<int> KeepNegativeNumbers(IEnumerable<int> numbers)
+        public IEnumerable<int> KeepNegativeNumbers(IEnumerable<int> numbers)
         {
             return FilterNumbers(numbers, IsSmallerThanZero);
         }
 
 
-        public static IEnumerable<int> FilterNumbers(IEnumerable<int> numbers, Func<int, bool> filterPredicate)
+        public IEnumerable<int> FilterNumbers(IEnumerable<int> numbers, Func<int, bool> filterPredicate)
         {
             var filteredNumbers = new List<int>();
             

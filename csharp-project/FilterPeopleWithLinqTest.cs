@@ -15,7 +15,7 @@ namespace TechIo
 			shouldShowHint = true;
 			TechIO.PrintMessage("Input", People.Instance);
 			var expected = People.Instance.Where(x => x.Age >= 30).ToList();
-			var actual = FilterPeopleWithLinq.KeepAdults(People.Instance).ToList();
+			var actual = new FilterPeopleWithLinq().KeepAdults(People.Instance).ToList();
 			TechIO.PrintMessage("Output", actual);
 			
 			CollectionAssert.AreEqual(expected, actual);

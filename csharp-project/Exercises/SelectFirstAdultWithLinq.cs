@@ -14,7 +14,7 @@ namespace Answer
         /// </summary>
         /// <param name="people">A collection of person objects</param>
         /// <returns>A (single) person object</returns>
-        public static Person GetFirstAdult(IEnumerable<Person> people)
+        public Person GetFirstAdult(IEnumerable<Person> people)
         {
             return people.First(p => p.Age >= 30);
         }

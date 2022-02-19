@@ -15,7 +15,7 @@ namespace TechIo
 			shouldShowHint = true;
 			TechIO.PrintMessage("Input", People.Instance);
 			var expected = People.Instance.Where(x => x.Age >= 30).Take(2).ToList();
-			var actual = FilterPeopleWithWhereAndTake.TakeFirstTwoAdults(People.Instance).ToList();
+			var actual = new FilterPeopleWithWhereAndTake().TakeFirstTwoAdults(People.Instance).ToList();
 			TechIO.PrintMessage("Output", actual);
 			
 			CollectionAssert.AreEqual(expected, actual);

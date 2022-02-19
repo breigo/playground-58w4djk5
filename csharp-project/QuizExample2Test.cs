@@ -24,7 +24,7 @@ namespace TechIo
 		{
 			shouldShowHint = true;
 			TechIO.PrintMessage("Input", People.Instance);
-			var actual = QuizExample2.GetSortedAdults(People.Instance).ToList();
+			var actual = new QuizExample2().GetSortedAdults(People.Instance).ToList();
 			TechIO.PrintMessage("Output", actual);
 			
 			CollectionAssert.AreEqual(Expected, actual);

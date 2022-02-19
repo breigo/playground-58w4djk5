@@ -19,7 +19,7 @@ namespace TechIo
 				.Select(x => x.Name)
 				.ToList();
 			
-			var actual = SelectNamesWithLinq.GetNames(People.Instance).ToList();
+			var actual = new SelectNamesWithLinq().GetNames(People.Instance).ToList();
 			
 			TechIO.PrintMessage("Output", actual);
 			

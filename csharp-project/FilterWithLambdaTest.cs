@@ -14,10 +14,11 @@ namespace TechIo
 		{
 			shouldShowHint = true;
 			var input = new[] { -5, 4, 10, 0, -9 };
+			var target = new FilterWithLambda();
 			
 			TechIO.PrintMessage("Input", input);
-			var actualPositive = FilterWithLambda.KeepPositiveNumbers(input).ToList();
-			var actualNegative = FilterWithLambda.KeepNegativeNumbers(input).ToList();
+			var actualPositive = target.KeepPositiveNumbers(input).ToList();
+			var actualNegative = target.KeepNegativeNumbers(input).ToList();
 			TechIO.PrintMessage("Output - KeepPositiveNumbers", actualPositive);
 			TechIO.PrintMessage("Output - KeepNegativeNumbers", actualNegative);
 

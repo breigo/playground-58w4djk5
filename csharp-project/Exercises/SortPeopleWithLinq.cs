@@ -15,7 +15,7 @@ namespace Answer
         /// </summary>
         /// <param name="people">A collection of person objects</param>
         /// <returns>A collection of person objects</returns>
-        public static IEnumerable<Person> SortByNameAndAge(IEnumerable<Person> people)
+        public IEnumerable<Person> SortByNameAndAge(IEnumerable<Person> people)
         {
             return people
                 .OrderBy(p => p.Age)

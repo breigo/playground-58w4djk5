@@ -8,12 +8,12 @@ namespace Answer
     public class FilterWithLinq
     {
 // }
-        public static IEnumerable<int> KeepPositiveNumbers(IEnumerable<int> numbers)
+        public IEnumerable<int> KeepPositiveNumbers(IEnumerable<int> numbers)
         {
             return numbers.Where(x => x > 0);
         }
         
-        public static IEnumerable<int> KeepNegativeNumbers(IEnumerable<int> numbers)
+        public IEnumerable<int> KeepNegativeNumbers(IEnumerable<int> numbers)
         {
             return numbers.Where(x => x < 0);
         }

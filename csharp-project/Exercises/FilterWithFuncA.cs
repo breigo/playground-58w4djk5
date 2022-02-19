@@ -8,18 +8,18 @@ namespace Answer
     public class FilterWithFuncA
     {
 // }
-        public static bool IsGreaterThanZero(int x)
+        public bool IsGreaterThanZero(int x)
         {
             return x > 0;
         }
 
-        public static IEnumerable<int> KeepPositiveNumbers(IEnumerable<int> numbers)
+        public IEnumerable<int> KeepPositiveNumbers(IEnumerable<int> numbers)
         {
             Func<int, bool> greaterZero = IsGreaterThanZero;
             return FilterNumbers(numbers, greaterZero);
         }
 
-        public static IEnumerable<int> FilterNumbers(IEnumerable<int> numbers, Func<int, bool> filterPredicate)
+        public IEnumerable<int> FilterNumbers(IEnumerable<int> numbers, Func<int, bool> filterPredicate)
         {
             var filteredNumbers = new List<int>();
             

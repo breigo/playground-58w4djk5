@@ -8,7 +8,7 @@ namespace Answer
     public class FilterWithoutLinq
     {
 // }
-        public static IEnumerable<int> KeepPositiveNumbers(IEnumerable<int> numbers)
+        public IEnumerable<int> KeepPositiveNumbers(IEnumerable<int> numbers)
         {
             var positiveNumbers = new List<int>();
 

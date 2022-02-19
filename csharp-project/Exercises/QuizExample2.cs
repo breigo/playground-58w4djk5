@@ -14,7 +14,7 @@ namespace Answer
         /// </summary>
         /// <param name="people">A collection of person objects</param>
         /// <returns>A collection of strings</returns>
-        public static IEnumerable<Person> GetSortedAdults(IEnumerable<Person> people)
+        public IEnumerable<Person> GetSortedAdults(IEnumerable<Person> people)
         {
             return people
                 // Add your code here

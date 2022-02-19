@@ -17,7 +17,7 @@ namespace TechIo
 			var input = new[] { -5, 4, 10, 0, -9 };
 			
 			TechIO.PrintMessage("Input", input);
-			var actual = FilterWithFuncB.KeepNegativeNumbers(input).ToList();
+			var actual = new FilterWithFuncB().KeepNegativeNumbers(input).ToList();
 			TechIO.PrintMessage("Output", actual);
 
 			CollectionAssert.AreEqual(new []{ -5, -9 }, actual);
