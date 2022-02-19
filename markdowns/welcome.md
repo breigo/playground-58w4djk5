@@ -7,11 +7,11 @@ We will take a look at the method syntax of LINQ and introduce basic LINQ method
 It's an introduction to the topic, not a deep dive.
 
 Topics covered are:
-* LINQ methods
 * Lambda expressions
-* Filtering data
-* Element operations
+* LINQ methods
+* Filter operations
 * Projection operations
+* Element operations
 
 ## Outcome
 At the end of the course you will be able to write simple LINQ queries to filter and manipulate collections in C#.
@@ -20,4 +20,4 @@ At the end of the course you will be able to write simple LINQ queries to filter
 Beginner
 
 ## Estimated time
-30 min
+< 40 min
