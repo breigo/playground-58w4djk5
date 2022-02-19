@@ -7,4 +7,6 @@ You can apply `Where` to restrict the result set to contain only elements that s
 
 ## Example
 
+Return all people, who are at least 30 years old.
+
 @[Where]({"stubs": ["Exercises/FilterPeopleWithLinq.cs"],"command": "TechIo.FilterPeopleWithLinqTest.Verify"})

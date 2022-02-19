@@ -22,9 +22,7 @@ You can also combine the methods:
 
 ```c#
 var numbers = new [] { 1, 2, 3, 4, 5, 6 };
-var result = numbers
-    .Skip(1)    // 2, 3, 4, 5, 6
-    .Take(3);   // 2, 3, 4
+var result = numbers.Skip(1).Take(3);   // 2, 3, 4
 ```
 
 # This is NEW - Method Chaining!

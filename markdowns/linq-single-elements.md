@@ -36,9 +36,9 @@ Throwing an exception is sometimes not intended behaviour.
 Instead, you want to return a default value if no element matches the predicate.
 For these use cases LINQ offers:
   
-* `FirstOrDefault(predicate)` returns the first element in the collection that matches the predicate, or the default value, if no element matches the predicate.
-* `LastOrDefault(predicate)` returns the last element in the collection that matches the pradicate, or the default value, if no element matches the predicate.
-* `SingleOrDefault(predicate)` returns the only element in the collection that matches the predicate, or the default value, if no element matches the predicate. If more than one element matches, the methods throws an exception.
+* `FirstOrDefault(predicate)`
+* `LastOrDefault(predicate)`
+* `SingleOrDefault(predicate)`
 
 The *default* value is defined by the type of the element:
 * `0` for integral types (like `int`, `long`, ...)

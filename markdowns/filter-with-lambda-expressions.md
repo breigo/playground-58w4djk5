@@ -12,7 +12,7 @@ Console.WriteLine(isGreaterThanZero(-4)) // false
 Here, `x => x > 0` is the lambda expression.
 * The `=>` operator is the lambda operator.
 * To the left of the lambda operator you see the input parameters (`x`).
-* To the right of the lambda operator there is the expression that is executed when calling the function (`x > 0`).
+* To the right of the lambda operator you see the expression that is executed when calling the function (`x > 0`).
 
 The types of input argument and return value are not explicitly stated in the lambda expression.
 They are inferred by the context.

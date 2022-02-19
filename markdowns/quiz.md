@@ -31,7 +31,7 @@ var result = people.FirstOrDefault(p => p.Age > 60 && p.Age < 70);
 
 In this example you are requested to write a simple LINQ query.
 
-You get a collection of people and shoud return a sorted list of people that are at least (>=) 30 years.
+You get a collection of people and shoud return all people that are at least (>=) 30 years old, sorted by name.
 
 Use LINQ methods discussed before: `Where`, `Take`, `Skip`, `OrderBy`, `OrderByDescending`, `ThenBy`, `ThenByDescending`, `Select`, `First`, `Last`, `Single`, `FirstOrDefault`, `LastOrDefault`, `SingleOrDefault`.
 
