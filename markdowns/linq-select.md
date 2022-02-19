@@ -6,7 +6,7 @@ The `Select(transformationFunction)` method allows you to project each element o
 The method takes a transformation function as argument.
 
 
-Here is a simple example. From a collection of numbers, calculate the squeare number of each element.
+Here is a simple example. From a collection of numbers, calculate the square number of each element.
 
 ```c#
 var numbers = new [] { 1, 2, 3, 4, 5 };
