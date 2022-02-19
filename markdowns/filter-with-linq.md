@@ -23,6 +23,16 @@ But there is more then `Where`. As in .Net 6 there are 63 other LINQ methods you
 We will cover the most common ones in the next sections.
 
 
+# Try it yourself
+
+Now it's time to write some code yourself: Select all numbers, that are equal to `0`.
+
+@[Filtering with LINQ Exercise]({"stubs": ["Exercises/FilterWithLinqExercise.cs"],"command": "TechIo.FilterWithLinqExerciseTest.Verify"})
+
+
+
+# Working with objects
+
 For the next examples we will use real objects instead of primitive data types such as `int`.
 From now on, we use a `Person` wiht a `Name` and `Age` (years from date of birth until now).
 

@@ -21,6 +21,10 @@ namespace TechIo
 			var actualNegative = target.KeepNegativeNumbers(input).ToList();
 			TechIO.PrintMessage("Output - KeepPositiveNumbers", actualPositive);
 			TechIO.PrintMessage("Output - KeepNegativeNumbers", actualNegative);
+
+			CollectionAssert.AreEqual(input.Where(x => x > 0).ToList(), actualPositive);
+			CollectionAssert.AreEqual(input.Where(x => x < 0).ToList(), actualNegative);
+
 			shouldShowHint = false;
 		}
 
