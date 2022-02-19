@@ -24,7 +24,7 @@ plan:
   plan:
   - title: "Filter with Where"
     statement: markdowns/linq-where.md
-  - title: "Skip and Take elements"
+  - title: "Take or Skip elements"
     statement: markdowns/linq-skip-take.md
   - title: "Sort with OrderBy"
     statement: markdowns/linq-sort.md
